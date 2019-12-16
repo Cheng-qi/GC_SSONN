@@ -4,7 +4,18 @@
 3种类别：  1 .Iris Setosa
           2. 虹膜Versicolour
           3. 鸢尾Virginica  
-数量与分布：共150组，每类各55组
-## Bancer.data乳腺癌数据
+数量与分布：共150组，每类各55组  
+详见：https://archive.ics.uci.edu/ml/datasets/Iris
+## Bancer.data乳腺癌数据  
+9维特征：    2.Clump Thickness肿块密度1 - 10  
+    3.Uniformity of Cell Size 细胞大小的一致性1 - 10  
+    4. Uniformity of Cell Shape细胞形状的均匀性1 - 10  
+    5.Marginal Adhesion边缘黏着度1 - 10  
+    6.Single Epithelial Cell Size单个上皮细胞大小1 - 10  
+    7.Bare Nuclei裸核1 - 10  
+    8.Bland Chromatin 淡染色质1 - 10  
+    9.Normal Nucleoli 正常核仁1 - 10  
+   10.Mitoses核分裂1 - 10  
+
 
 
