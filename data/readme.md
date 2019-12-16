@@ -8,16 +8,17 @@
 详见：https://archive.ics.uci.edu/ml/datasets/Iris
 ## Bancer.data乳腺癌数据  
 9维特征：    1.Clump Thickness肿块密度1 - 10  
-            2.Uniformity of Cell Size 细胞大小的一致性1 - 10  
-            3. Uniformity of Cell Shape细胞形状的均匀性1 - 10  
-            4.Marginal Adhesion边缘黏着度1 - 10  
-            5.Single Epithelial Cell Size单个上皮细胞大小1 - 10  
-            6.Bare Nuclei裸核1 - 10  
-            7.Bland Chromatin 淡染色质1 - 10  
-            8.Normal Nucleoli 正常核仁1 - 10  
-            9.Mitoses核分裂1 - 10  
+                      2.Uniformity of Cell Size 细胞大小的一致性1 - 10  
+              3. Uniformity of Cell Shape细胞形状的均匀性1 - 10  
+                      4.Marginal Adhesion边缘黏着度1 - 10  
+              5.Single Epithelial Cell Size单个上皮细胞大小1 - 10  
+               6.Bare Nuclei裸核1 - 10  
+               7.Bland Chromatin 淡染色质1 - 10  
+               8.Normal Nucleoli 正常核仁1 - 10  
+              9.Mitoses核分裂1 - 10  
 两种类别：   良性， 恶性  
-数量与分布： 共683组(原始数据共699组，其中有16组数据属性缺失，此处已删除)，良性
+数量与分布： 共683组(原始数据共699组，其中有16组数据属性缺失，此处已删除)，良性444组，恶性239组  
+## 
 
 
 
