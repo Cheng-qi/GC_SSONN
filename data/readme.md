@@ -3,7 +3,8 @@
 4维特征：   1.萼片长度（cm）
            2.萼片宽度（cm）
            3.花瓣长度以厘米为单位
-           4.花瓣宽度（cm）\n
+           4.花瓣宽度（cm）  
+           
 3种类别：  1 .Iris Setosa
           2. 虹膜Versicolour
           3. 鸢尾Virginica
