@@ -4,12 +4,8 @@
 """
 @version: 3.7.2
 @author: Qi Cheng
-@license: Apache Licence 
 @contact: chengqi96@126.com
 @site: https://github.com/Cheng-qi
-@software: PyCharm
-@file: model1123a.py
-@time: 2019/11/21 17:23
 """
 import time
 import torch
@@ -262,98 +258,9 @@ class SelfOrganizeNN(torch.nn.Module):
 
 
 if __name__=="__main__":
-    # np.random.seed(0)
-
-    # _, y = np.where(y==1)# y = (np.sum(x**2+np.exp(x),1)-np.mean(np.sum(x**2+np.exp(x),1)))/np.var(np.sum(x**2+np.exp(x),1))
-
-    # y_wine=np.array(pd.read_excel("../小论文程序与结果/数据/新酒分类/新酒分类.xls",sheet_name="训练数据",usecols=range(13,16),header = None))
-    # _, y_wine = np.where(y_wine==1)# y = (np.sum(x**2+np.exp(x),1)-np.mean(np.sum(x**2+np.exp(x),1)))/np.var(np.sum(x**2+np.exp(x),1))
-    #
-    print("************鸢尾花*************")
-
-    # 鸢尾花数据
-    x_flower = np.array(pd.read_excel("../小论文程序与结果/数据/新鸢尾属植物/归一化后数据.xls",sheet_name="训练数据各40组",usecols=[0,1,2,3],header = None))
-    y_flower = np.array(pd.read_excel("../小论文程序与结果/数据/新鸢尾属植物/归一化后数据.xls",sheet_name="训练数据各40组",usecols=[4,5,6],header = None))
-    x_flower_test = np.array(pd.read_excel("../小论文程序与结果/数据/新鸢尾属植物/归一化后数据.xls",sheet_name="测试数据各10组",usecols=[0,1,2,3],header = None))
-    y_flower_test = np.array(pd.read_excel("../小论文程序与结果/数据/新鸢尾属植物/归一化后数据.xls",sheet_name="测试数据各10组",usecols=[4,5,6],header = None))
-
-    model = SelfOrganizeNN(x_flower.shape[1],y_flower.shape[1],1,h_activaty_func=torch.relu)
-    # opt_SGD = torch.optim.SGD(model.parameters(), lr=0.01)
-    outs = model.trains(x_flower ,y_flower,maxiter=300,learning_rate = 0.1, self_structure = True)
-    ##训练集
-    model.predict(x_flower,y_flower)
-    print("训练集准确率",model.evaluate())
-    ##测试集
-    model.predict(x_flower_test,y_flower_test)
-    print("测试集准确率",model.evaluate())
-
-    print(outs)
-    print(model.n_hidden)
-    plot(np.array(model.record_hidden))
+    pass
 
 
-
-    # print("************新酒*************")
-    # #新酒数据
-    # x_wine_pro = np.array(pd.read_excel("../小论文程序与结果/数据/新酒分类/新酒分类.xls",sheet_name="训练数据",usecols=range(0,13),header = None))
-    # y_wine = np.array(pd.read_excel("../小论文程序与结果/数据/新酒分类/新酒分类.xls", sheet_name="训练数据", usecols=range(13, 16), header=None))
-    # x_wine = (x_wine_pro- x_wine_pro.mean(axis=0)) / x_wine_pro.std(axis=0)  ##此处标准差分母为n维
-    #
-    # x_wine_pro_test = np.array(pd.read_excel("../小论文程序与结果/数据/新酒分类/新酒分类.xls",sheet_name="测试数据",usecols=range(0,13),header = None))
-    # y_wine_test = np.array(pd.read_excel("../小论文程序与结果/数据/新酒分类/新酒分类.xls", sheet_name="测试数据", usecols=range(13, 16), header=None))
-    # x_wine_test = (x_wine_pro_test-x_wine_pro.mean(axis=0))/x_wine_pro.std(axis=0) ##此处标准差分母为n维
-    #
-    #
-    # model_wine = SelfOrganizeNN(x_wine.shape[1], y_wine.shape[1],1,h_activaty_func=torch.relu)
-    # # opt_SGD = torch.optim.SGD(model.parameters(), lr=0.01)
-    # outs_wine = model_wine.trains(x_wine, y_wine, maxiter=200, learning_rate=0.1, self_structure = True)
-    #
-    #
-    # model_wine.predict(x_wine, y_wine)
-    # print("训练集准确率",model_wine.evaluate())
-    #
-    # model_wine.predict(x_wine_test, y_wine_test)
-    # print("测试集准确率",model_wine.evaluate())
-    # # print(outs)
-    # plot(np.array(model_wine.record_hidden))
-    # print(model_wine.n_hidden)
-    # print(x_wine.shape)
-    #
-    #
-     #新酒数据
-
-    # # 语音信号
-    # path = "../data/voice.data"
-    # voice_data = pd.read_table(path, header=None, sep=",")
-    # x_voice = voice_data[list(range(1,25))]
-    # y_voice = pd.Categorical(voice_data[0]).codes
-    # x_data = x_voice
-    # y_data = y_voice
-    # result_folder = "../results/results_voice"
-    #
-    # # 数据分割
-    # x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, train_size=0.8, stratify=y_data,
-    #                                                                         random_state=0)
-    # # 归一化数据
-    # stand = StandardScaler()
-    # stand.fit(x_train)
-    # x_train_std = stand.transform(x_train)
-    # x_test_std = stand.transform(x_test)
-    #
-    #
-    # model_voice = SelfOrganizeNN(x_train_std.shape[1], np.max(y_train) + 1,15,h_activaty_func=torch.relu)
-    # # opt_SGD = torch.optim.SGD(model.parameters(), lr=0.01)
-    # outs_wine = model_voice.trains(x_train_std, y_train, maxiter=300, learning_rate=0.1, self_structure = False)
-    #
-    # model_voice.predict(x_train_std, y_train)
-    # print("训练集准确率",model_voice.evaluate())
-    #
-    # model_voice.predict(x_test_std, y_test)
-    # print("测试集准确率",model_voice.evaluate())
-    # # print(outs)
-    # plot(np.array(model_voice.record_hidden))
-    # print(model_voice.n_hidden)
-    #
 
 
 
