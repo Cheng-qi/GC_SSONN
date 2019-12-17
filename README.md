@@ -1,2 +1,2 @@
-# SLFN_SSONN
-SLFN-SSONN算法实现
+# GC_SSONN
+GC-SSONN算法实现
