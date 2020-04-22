@@ -7,8 +7,8 @@
 &emsp;&emsp;&emsp;&emsp;4.花瓣宽度（cm）     
 3种类别：  
 &emsp;&emsp;&emsp;&emsp;1 .Iris Setosa  
-&emsp;&emsp;&emsp;&emsp2. Versicolour  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3. Virginica    
+&emsp;&emsp;&emsp;&emsp;2. Versicolour  
+&emsp;&emsp;&emsp;&emsp;3. Virginica    
 数量与分布：共150组，每类各55组    
 详见：https://archive.ics.uci.edu/ml/datasets/Iris  
 ## Cancer.data乳腺癌数据集  
